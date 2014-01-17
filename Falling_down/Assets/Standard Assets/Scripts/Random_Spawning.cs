@@ -21,7 +21,7 @@ public class Random_Spawning : MonoBehaviour {
 	public IEnumerator RandomSpawn (float waitTime) {
 		while(shouldSpawn) {
 			yield return new WaitForSeconds(waitTime);
-			Instantiate(portal,new Vector3(Random.Range(1.565425f,14.849249f),spawnPosition), Quaternion.identity);
+			Instantiate(portal,new Vector3(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
 		}
 	}
 }
