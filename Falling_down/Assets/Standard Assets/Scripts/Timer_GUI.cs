@@ -18,7 +18,7 @@ public class Timer_GUI : MonoBehaviour {
 		int minutes = ((int)time_of / 60);
 		int seconds = ((int)time_of % 60);
 		
-		string GUITimeText = string.Format ("{0}:{1}", minutes, seconds);
-		GUI.Label (new Rect (9, 2, 100, 100), GUITimeText);
+		string GUITimeText = string.Format ("{0,2}:{1:00}", minutes, seconds);
+		GUI.Label (new Rect (10, 10, 100, 100), GUITimeText);
 	}
 }
