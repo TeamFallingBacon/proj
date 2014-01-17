@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\Scripts\Falling_Script.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Main_Menu_GUI.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Player_Movement.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Random_Spawning.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Timer_GUI.cs" />
