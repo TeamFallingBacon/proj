@@ -13,7 +13,7 @@ public class Main_Menu_GUI : MonoBehaviour {
 	
 	}
 	void OnGUI() {
-		GUI.Label (new Rect (Screen.width / 2 - 35.0f, Screen.height / 2 - 300.0f - 25.0f, 100, 50), "Main Menu");
+		GUI.Label (new Rect (Screen.width*0.44f, Screen.height * 0.20f, 100, 50), "Main Menu");
 		if (GUI.Button (new Rect (Screen.width/2 - 50.0f, Screen.height/2 - 25.0f, 100, 50), "Start")) {
 			Application.LoadLevel ("level1");
 		}
