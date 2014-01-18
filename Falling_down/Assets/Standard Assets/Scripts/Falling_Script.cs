@@ -2,17 +2,20 @@
 using System.Collections;
 
 public class Falling_Script : MonoBehaviour {
-	private GameObject portal;
+	private GameObject fallingObject;
+	public bool generateSpeed = false;
 	public float movementSpeed = 0;
 	private Vector3 movementAmount;
 	// Use this for initialization
 	void Start () {
-		portal = gameObject;
+		fallingObject = gameObject;
+		if (generateSpeed)
+			movementSpeed = Random.Range(.01f,.05f);
 		movementAmount = new Vector3(0,movementSpeed,0);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		portal.transform.position += movementAmount;
+		fallingObject.transform.position += movementAmount;
 	}
 }
