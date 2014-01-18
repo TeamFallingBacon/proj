@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Timer_GUI : MonoBehaviour {
-	private float start_time;
+	public GUISkin guiSkin;
+	public float start_time;
 	public float time_of;
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,7 @@ public class Timer_GUI : MonoBehaviour {
 
 	}
 	void OnGUI(){
+		GUI.skin = guiSkin;
 		time_of = Time.time - start_time;
 		int minutes = ((int)time_of / 60);
 		int seconds = ((int)time_of % 60);
