@@ -2,10 +2,8 @@
 using System.Collections;
 
 public class Destroyer : MonoBehaviour {
-	GameObject destroyer;
 	// Use this for initialization
 	void Start () {
-		destroyer = gameObject;
 	}
 	
 	// Update is called once per frame

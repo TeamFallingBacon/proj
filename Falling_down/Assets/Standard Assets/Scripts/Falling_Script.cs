@@ -10,7 +10,7 @@ public class Falling_Script : MonoBehaviour {
 	void Start () {
 		fallingObject = gameObject;
 		if (generateSpeed)
-			movementSpeed = Random.Range(.01f,.05f);
+			movementSpeed = Random.Range(.04f,.08f);
 		movementAmount = new Vector3(0,movementSpeed,0);
 	}
 	
