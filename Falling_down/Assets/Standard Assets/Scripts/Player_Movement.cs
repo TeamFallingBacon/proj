@@ -3,17 +3,22 @@ using System.Collections;
 
 public class Player_Movement : MonoBehaviour {
 	public float movementSpeed = 0;
+	public float floatSpeed = 0;
 	private Vector3 movementAmountX;
+	private Vector3 movementAmountY;
+	private float initialPosition;
 	private GameObject player;
-	public float hoverAmount;
 	public bool shouldHover = true;
-	public float hoverLimits = 10f;
+	public float hoverLimits;
+	private float moveAmount = 0;
 
 	// Use this for initialization
 	void Start () {
 		movementAmountX = new Vector3(movementSpeed, 0, 0);
+		movementAmountY = new Vector3(0,floatSpeed,0);
 		player = gameObject;
-		StartCoroutine(Hover(hoverAmount));
+		initialPosition = player.transform.position.y;
+		StartCoroutine(Hover());
 	}
 	
 	// Update is called once per frame
@@ -25,11 +30,18 @@ public class Player_Movement : MonoBehaviour {
 		}
 	}
 
-	void IEnumerator Hover(float hoverAmount) {
+	public IEnumerator Hover() {
 		while (shouldHover) {
-			int dir = Random.Range(0,1);
-			if (dir && ) { //Up
-				player.transform.Translate(
+			yield return new WaitForSeconds(0.05f);
+			int dir = Random.Range(0,2);
+			Debug.Log(player.transform.position.y);
+			if (dir == 1 && (player.transform.position.y <= (initialPosition + hoverLimits))) { //Up
+				moveAmount -= floatSpeed;
+				player.transform.position -= movementAmountY;
+			} else if (dir == 0 && (player.transform.position.y >= (initialPosition - hoverLimits))) { //Down
+				moveAmount += floatSpeed;
+				player.transform.position += movementAmountY;
+			}
 		}
 	}
 }
