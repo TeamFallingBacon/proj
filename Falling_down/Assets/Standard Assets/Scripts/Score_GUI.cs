@@ -19,6 +19,6 @@ public class Score_GUI : MonoBehaviour {
 	void OnGUI(){
 		GUI.skin = guiSkin;
 		string scoreText = string.Format ("Score: {0}", score.score);
-		GUI.Label (new Rect (10, 30, 500, 100), scoreText);
+		GUI.Label (new Rect (10, 15, 500, 100), scoreText);
 	}
 }

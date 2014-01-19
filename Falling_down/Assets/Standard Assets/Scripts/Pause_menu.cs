@@ -42,7 +42,7 @@ public class Pause_menu : MonoBehaviour {
 			if (GUI.Button(new Rect (Screen.width/2 - 62.0f, Screen.height/2+25.0f, 150, 50), "RESTART")) {
 				Application.LoadLevel("level1");
 			}
-			if (GUI.Button(new Rect (Screen.width/2 - 62.0f, Screen.height/2+75.0f, 150, 50), "MAIN MENU")) {
+			if (GUI.Button(new Rect (Screen.width/2 - 62.0f, Screen.height/2+85.0f, 150, 50), "MAIN MENU")) {
 				Application.LoadLevel("main_menu");
 			}
 		}
