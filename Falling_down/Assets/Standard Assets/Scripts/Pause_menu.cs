@@ -4,7 +4,8 @@ using System.Collections;
 public class Pause_menu : MonoBehaviour {
 	public GUISkin guiSkin;
 	public GameObject camera;
-	public FuelGauge fuel;
+	private FuelGauge fuel;
+
 	void pause(){
 		Time.timeScale = 0.0f;
 	}
