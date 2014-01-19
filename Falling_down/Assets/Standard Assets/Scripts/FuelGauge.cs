@@ -10,17 +10,17 @@ public class FuelGauge : MonoBehaviour {
 	public Texture2D background;
 
 	void Start() {
-		barwidth = Screen.width/4 * (fuelRemaining/fuelTotal) * Time.timeScale;
+		barwidth = Screen.width/3 * (fuelRemaining/fuelTotal) * Time.timeScale;
 	}
 	
 	void OnGUI() {
-		GUI.DrawTexture(new Rect(pos.x, pos.y, Screen.width/4, 20), background);
+		GUI.DrawTexture(new Rect(pos.x, pos.y, Screen.width/3, 20), background);
 		GUI.DrawTexture(new Rect(pos.x, pos.y, barwidth, 20), frontground);
 	}
 	
 	void Update() {
-		barwidth = (Screen.width/4) * (fuelRemaining/fuelTotal) * Time.timeScale;
-		fuelRemaining -= .1f;
+		barwidth = (Screen.width/3) * (fuelRemaining/fuelTotal) * Time.timeScale;
+		fuelRemaining -= .15f;
 		if (fuelRemaining <= 0) {
 			fuelRemaining = 0;
 		}
