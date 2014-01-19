@@ -24,8 +24,12 @@ public class Player_Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey("left") && player.transform.position.x >= 2.996f) {
+			if (player.transform.rotation.y != 180)
+				player.transform.rotation = new Quaternion(0,180,0,0);
 			player.transform.position -= movementAmountX * Time.deltaTime*80;
 		} else if (Input.GetKey("right") && player.transform.position.x <= 12.3f) {
+			if (player.transform.rotation.y != 0)
+				player.transform.rotation = new Quaternion(0,0,0,0);
 			player.transform.position += movementAmountX * Time.deltaTime*80;
 		}
 	}
