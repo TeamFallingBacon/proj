@@ -36,19 +36,21 @@ public class Pause_menu : MonoBehaviour {
 	void OnGUI(){
 		GUI.skin = guiSkin;
 		if (fuel.gameOver) {
-			Debug.Log ("Before restart");
-			Debug.Log (Time.timeScale);
 			pause ();
 			GUI.Label (new Rect (Screen.width/2-100.0f, Screen.height/2-25.0f, 250, 50), "GAME OVER");
 			if (GUI.Button(new Rect (Screen.width/2 - 62.0f, Screen.height/2+25.0f, 150, 50), "RESTART")) {
 				Application.LoadLevel("level1");
 			}
+			if (GUI.Button(new Rect (Screen.width/2 - 62.0f, Screen.height/2+75.0f, 150, 50), "MAIN MENU")) {
+				Application.LoadLevel("main_menu");
+			}
 		}
 		
 		else if (Time.timeScale < 1) {
-			Debug.Log ("in pause thingy");
-			Debug.Log (Time.timeScale);
-			GUI.Label (new Rect (Screen.width/2 - 65.0f, Screen.height/2-25.0f, 170, 50), "PAUSED"); 
+			GUI.Label (new Rect (Screen.width/2 - 65.0f, Screen.height/2-25.0f, 170, 50), "PAUSED");
+			if (GUI.Button(new Rect (Screen.width/2 - 62.0f, Screen.height/2+25.0f, 150, 50), "MAIN MENU")) {
+				Application.LoadLevel("main_menu");
+			}
 		}
 	}
 }
