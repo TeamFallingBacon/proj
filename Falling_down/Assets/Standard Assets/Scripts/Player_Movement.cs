@@ -35,12 +35,14 @@ public class Player_Movement : MonoBehaviour {
 			yield return new WaitForSeconds(0.05f);
 			int dir = Random.Range(0,2);
 			Debug.Log(player.transform.position.y);
-			if (dir == 1 && (player.transform.position.y <= (initialPosition + hoverLimits))) { //Up
+			Debug.Log (initialPosition);
+			Debug.Log (dir);
+			if (dir == 1 && (player.transform.position.y >= (initialPosition - hoverLimits))) { //Up
 				moveAmount -= floatSpeed;
-				player.transform.position -= movementAmountY;
-			} else if (dir == 0 && (player.transform.position.y >= (initialPosition - hoverLimits))) { //Down
+				player.transform.position -= movementAmountY*Time.deltaTime*30;
+			} else if (dir == 0 && (player.transform.position.y <= (initialPosition + hoverLimits))) { //Down
 				moveAmount += floatSpeed;
-				player.transform.position += movementAmountY;
+				player.transform.position += movementAmountY*Time.deltaTime*30;
 			}
 		}
 	}
