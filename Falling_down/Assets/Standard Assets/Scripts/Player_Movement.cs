@@ -14,9 +14,9 @@ public class Player_Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey("left") && player.transform.position.x >= 2.996f) {
-			player.transform.position -= movementAmountX;
+			player.transform.position -= movementAmountX * Time.deltaTime*80;
 		} else if (Input.GetKey("right") && player.transform.position.x <= 12.3f) {
-			player.transform.position += movementAmountX;
+			player.transform.position += movementAmountX * Time.deltaTime*80;
 		}
 	}
 }
