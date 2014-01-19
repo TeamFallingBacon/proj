@@ -15,11 +15,11 @@ public class Main_Menu_GUI : MonoBehaviour {
 	void OnGUI() {
 
 		GUI.skin = guiSkin;
-		GUI.Label (new Rect (Screen.width/2 - 50.0f, Screen.height * 0.20f, 100, 50), "Main Menu");
-		if (GUI.Button (new Rect (Screen.width/2 - 50.0f, Screen.height/2 - 25.0f, 100, 50), "Start")) {
+		GUI.Label (new Rect (Screen.width/2 - 50.0f, Screen.height * 0.20f, 150, 50), "MAIN MENU");
+		if (GUI.Button (new Rect (Screen.width/2 - 50.0f, Screen.height/2 - 25.0f, 100, 50), "START")) {
 			Application.LoadLevel ("level1");
 		}
-		if (GUI.Button (new Rect (Screen.width / 2 - 50.0f, Screen.height / 2 + 50.0f - 25.0f, 100, 50), "Exit")) {
+		if (GUI.Button (new Rect (Screen.width / 2 - 50.0f, Screen.height / 2 + 50.0f - 25.0f, 100, 50), "EXIT")) {
 			Application.Quit();		
 		}
 	}

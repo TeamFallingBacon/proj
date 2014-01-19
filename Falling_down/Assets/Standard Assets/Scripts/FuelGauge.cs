@@ -8,9 +8,9 @@ public class FuelGauge : MonoBehaviour {
 	private float barwidth;
 	public Texture2D frontground;
 	public Texture2D background;
-
+	public bool gameOver = false;
 	void Start() {
-		barwidth = Screen.width/3 * (fuelRemaining/fuelTotal) * Time.timeScale;
+		barwidth = Screen.width / 3 * (fuelRemaining / fuelTotal);// * Time.timeScale;
 	}
 	
 	void OnGUI() {
@@ -19,10 +19,17 @@ public class FuelGauge : MonoBehaviour {
 	}
 	
 	void Update() {
-		barwidth = (Screen.width/3) * (fuelRemaining/fuelTotal) * Time.timeScale;
-		fuelRemaining -= .15f;
-		if (fuelRemaining <= 0) {
-			fuelRemaining = 0;
+		if (Time.timeScale > 0.0f) {
+			barwidth = (Screen.width / 3) * (fuelRemaining / fuelTotal);// * Time.timeScale;
+			//fuelRemaining -= .15f;
+			if (fuelRemaining > 0) {
+				fuelRemaining -= .1f;
+			}
+			else {
+				//Time.timeScale = 0;
+				gameOver = true;
+			}	
 		}
+
 	}
 }
