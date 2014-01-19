@@ -4,14 +4,14 @@ using System.Collections;
 public class Pause_menu : MonoBehaviour {
 	public GUISkin guiSkin;
 	void pause(){
-		Time.timeScale = 0;
-		RaycastHit2D[] hits;
-		hits = Physics2D.RaycastAll(transform.position, -Vector2.up);
-		Debug.Log (transform.position);
-		Debug.Log(hits.Length);
+		Time.timeScale = 0.0f;
+//		RaycastHit2D[] hits;
+//		hits = Physics2D.RaycastAll(transform.position, -Vector2.up);
+//		Debug.Log (transform.position);
+//		Debug.Log(hits.Length);
 	}
 	void unpause(){
-		Time.timeScale = 1;
+		Time.timeScale = 1.0f;
 	}
 	void pauseToggle(){
 		if (Time.timeScale > 0) {
