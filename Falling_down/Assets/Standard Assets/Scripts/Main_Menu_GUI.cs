@@ -17,6 +17,9 @@ public class Main_Menu_GUI : MonoBehaviour {
 		GUI.skin = guiSkin;
 		GUI.Label (new Rect (Screen.width/2 - 50.0f, Screen.height * 0.17f, 150, 50), "<size=50>Title</size>");
 		GUI.Label (new Rect (Screen.width/2 - 80.0f, Screen.height * 0.35f, 250, 50), "<size=35>MAIN MENU</size>");
+		GUI.Label (new Rect (Screen.width/2 - 60.0f, Screen.height * 0.87f, 250, 50), "<size=28>REFUEL</size>");
+		GUI.Label (new Rect (10, Screen.height * 0.87f, 250, 50), "<size=28>AVOID</size>");
+		GUI.Label (new Rect (350, Screen.height * 0.87f, 250, 50), "<size=28>???</size>");
 		if (GUI.Button (new Rect (Screen.width/2 - 50.0f, Screen.height/2 - 25.0f, 100, 50), "START")) {
 			Application.LoadLevel ("level1");
 		}
