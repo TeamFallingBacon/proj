@@ -23,7 +23,7 @@ public class FuelGauge : MonoBehaviour {
 			barwidth = (Screen.width / 3) * (fuelRemaining / fuelTotal);// * Time.timeScale;
 			//fuelRemaining -= .15f;
 			if (fuelRemaining > 0) {
-				fuelRemaining -= .1f;
+				fuelRemaining -= .1f * Initialize.slowTime;
 			}
 			else {
 				//Time.timeScale = 0;

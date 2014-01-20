@@ -31,21 +31,27 @@ public class Random_Spawning : MonoBehaviour {
 
 	public IEnumerator AsteroidSpawn (float waitTime) {
 		while(shouldSpawn) {
+			yield return new WaitForSeconds(waitTime);
+			Instantiate(asteroid,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
+			/*
 			for (int i = 0; i != Random.Range(1, 12); i++) {
 				yield return new WaitForSeconds(waitTime);
 				Instantiate(asteroid,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
-			}
-			waitTime = Random.Range(0.01f, 2.0f);
+			}*/
+			waitTime = Random.Range(0.04f, 1.0f);
 		}
 	}
 
 	public IEnumerator ItemSpawn (float waitTime) {
 		while(shouldSpawn) {
+			yield return new WaitForSeconds(waitTime);
+			Instantiate(item,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
+			/*
 			for (int i = 0; i != Random.Range(6, 9); i++) {
 				yield return new WaitForSeconds(waitTime);
 				Instantiate(item,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
-			}
-			waitTime = Random.Range(0.04f, 2.0f);
+			}*/
+			waitTime = Random.Range(0.04f, 0.8f);
 		}
 	}
 

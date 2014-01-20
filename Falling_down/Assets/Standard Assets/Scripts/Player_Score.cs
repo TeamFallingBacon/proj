@@ -19,11 +19,10 @@ public class Player_Score : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Portal") {
-			fuel.fuelRemaining += 30.0f;
 			score.totalScore += 5000;
 		}
 		else if (other.tag == "Bacon") {
-			fuel.fuelRemaining += 5.0f;
+			fuel.fuelRemaining += 3.0f;
 			score.totalScore += 100;
 		}
 		else if (other.tag == "Asteroid") {
