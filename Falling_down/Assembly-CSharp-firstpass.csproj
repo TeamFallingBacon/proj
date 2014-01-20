@@ -49,6 +49,7 @@
      <Compile Include="Assets\Standard Assets\Scripts\Asteroid_Script.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Background_Movement.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Background_Movement_Horizontal.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\CollisionSounds.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Falling_Script.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Falling_Script_Horizontal.cs" />

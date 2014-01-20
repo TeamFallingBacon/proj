@@ -20,7 +20,7 @@ public class Player_Score : MonoBehaviour {
 			fuel.fuelRemaining += 30.0f;
 			score += 5000;
 		}
-		else if (other.tag == "Item") {
+		else if (other.tag == "Bacon") {
 			fuel.fuelRemaining += 5.0f;
 			score += 100;
 		}
