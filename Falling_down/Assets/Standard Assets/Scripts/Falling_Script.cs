@@ -9,8 +9,11 @@ public class Falling_Script : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		fallingObject = gameObject;
-		if (generateSpeed)
+		if (generateSpeed) {
 			movementSpeed = Random.Range(.08f,.12f);
+			if (Application.loadedLevelName == "level3") //Reversed the direction in level 3
+				movementSpeed *= -1;
+		}
 		movementAmount = new Vector3(0,movementSpeed,0);
 	}
 	

@@ -5,7 +5,6 @@ using System.Collections;
 public class Soundtrack : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
-		Debug.Log("Playyyy!");
 		audio.Play();
 	}
 	

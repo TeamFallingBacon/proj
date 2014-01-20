@@ -22,7 +22,6 @@ public class Item_Script : MonoBehaviour {
 
 		}
 		else if (other.tag == "Player") {
-			Debug.Log("Hit item");
 			Destroy (item);
 		}
 	}

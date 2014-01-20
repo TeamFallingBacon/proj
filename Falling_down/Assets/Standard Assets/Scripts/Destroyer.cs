@@ -12,7 +12,6 @@ public class Destroyer : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log("Hit something!");
 		Destroy(other.gameObject);
 	}
 }
