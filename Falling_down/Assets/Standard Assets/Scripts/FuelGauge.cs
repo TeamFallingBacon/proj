@@ -14,8 +14,8 @@ public class FuelGauge : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		GUI.DrawTexture(new Rect(pos.x, pos.y, Screen.width/3, 20), background);
-		GUI.DrawTexture(new Rect(pos.x, pos.y, barwidth, 20), frontground);
+		GUI.DrawTexture(new Rect(Screen.width-pos.x, pos.y, Screen.width/3, 20), background);
+		GUI.DrawTexture(new Rect(Screen.width-pos.x, pos.y, barwidth, 20), frontground);
 	}
 	
 	void Update() {
