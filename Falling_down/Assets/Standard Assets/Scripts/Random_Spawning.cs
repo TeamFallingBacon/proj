@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Random_Spawning : MonoBehaviour {
-	public GameObject portal, item, asteroid;
+	public GameObject portal, item, clock, asteroid;
 	public bool shouldSpawn;
 	private float spawnPosition;
 
@@ -51,7 +51,7 @@ public class Random_Spawning : MonoBehaviour {
 	public IEnumerator ClockSpawn (float waitTime) {
 		while (shouldSpawn) {
 			yield return new WaitForSeconds(waitTime);
-			Instantiate(portal,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
+			Instantiate(clock,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
 			waitTime = Random.Range(7.0f, 10.0f);
 		}
 	}

@@ -13,14 +13,15 @@ public class CollisionSounds : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Asteroid") {
-			audio.PlayOneShot(asteroidSound);
+			audio.PlayOneShot(asteroidSound, .4f);
 		} else if (other.tag == "Bacon") {
-			audio.PlayOneShot(baconSound);
+			audio.PlayOneShot(baconSound, 1f);
+		} else if (other.tag == "Portal") {
+			audio.PlayOneShot(portalSound);
 		}
 	}
 }
