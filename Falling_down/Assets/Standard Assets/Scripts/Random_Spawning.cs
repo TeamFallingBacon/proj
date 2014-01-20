@@ -12,8 +12,8 @@ public class Random_Spawning : MonoBehaviour {
 		StartCoroutine(ItemSpawn(Random.Range(0.01f, 1.2f)));
 		StartCoroutine(AsteroidSpawn(Random.Range(0.01f, 1.2f)));
 		StartCoroutine(PortalSpawn(Random.Range(3.0f, 6.0f)));
-		StartCoroutine(SpacecopSpawn(Random.Range(5.0f, 8.0f)));
-		StartCoroutine (ClockSpawn (Random.Range (7.0f, 10.0f)));
+		StartCoroutine(SpacecopSpawn(Random.Range(3.0f, 5.0f)));
+		StartCoroutine (ClockSpawn (Random.Range (8.0f, 15.0f)));
 	}
 	
 	// Update is called once per frame
@@ -25,7 +25,7 @@ public class Random_Spawning : MonoBehaviour {
 		while (shouldSpawn) {
 			yield return new WaitForSeconds(waitTime);
 			Instantiate(spacecop,new Vector2(Random.Range (2.996f,12.3f), spawnPosition), Quaternion.identity);
-			yield return new WaitForSeconds(waitTime/3);
+			yield return new WaitForSeconds(waitTime/4);
 		}
 	}
 

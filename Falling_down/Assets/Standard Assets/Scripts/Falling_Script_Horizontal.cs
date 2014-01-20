@@ -16,6 +16,9 @@ public class Falling_Script_Horizontal : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		fallingObject.transform.position -= movementAmount * Time.deltaTime*100 * Initialize.slowTime;
+		if (fallingObject.tag == "Bacon")
+			fallingObject.transform.position -= movementAmount * Time.deltaTime*100;
+		else
+			fallingObject.transform.position -= movementAmount * Time.deltaTime*100 * Initialize.slowTime;
 	}
 }
