@@ -3,11 +3,12 @@ using System.Collections;
 
 public class Score_GUI : MonoBehaviour {
 	public GUISkin guiSkin;
-	public GameObject player;
-	public Player_Score score;
+	public GameObject keeper;
+	public Score_Keeper score;
 	// Use this for initialization
 	void Start () {
-		score = (Player_Score) player.GetComponent(typeof(Player_Score));
+		keeper = GameObject.Find ("ScoreKeeper");
+		score = (Score_Keeper) keeper.GetComponent(typeof(Score_Keeper));
 	
 	}
 	
@@ -18,7 +19,7 @@ public class Score_GUI : MonoBehaviour {
 
 	void OnGUI(){
 		GUI.skin = guiSkin;
-		string scoreText = string.Format ("Score: {0}", score.score);
+		string scoreText = string.Format ("Score: {0}", score.totalScore);
 		GUI.Label (new Rect (10, 15, 500, 100), scoreText);
 	}
 }
