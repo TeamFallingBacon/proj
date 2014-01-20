@@ -39,16 +39,17 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Programs for Windows 8/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Programs for Windows 8/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\Scripts\Asteroid_Script.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Background_Movement.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Background_Movement_Horizontal.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Background_Movement_level3.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\CollisionSounds.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Falling_Script.cs" />
@@ -59,13 +60,17 @@
      <Compile Include="Assets\Standard Assets\Scripts\Item_Script.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Item_Spawning.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Main_Menu_GUI.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Pause_menu.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Player_Moment_Horizontal.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Player_Movement.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Player_Movement_level3.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Player_Score.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Portal_Script.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Portal_Script_level2.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Random_Spawning.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Random_Spawning_Horizontal.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Random_Spawning_level3.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Score_GUI.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Score_Keeper.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Soundtrack.cs" />
