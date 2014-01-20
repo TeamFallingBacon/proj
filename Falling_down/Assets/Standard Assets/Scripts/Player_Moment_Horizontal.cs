@@ -41,9 +41,6 @@ public class Player_Moment_Horizontal : MonoBehaviour {
 		while (shouldHover) {
 			yield return new WaitForSeconds(0.05f);
 			int dir = Random.Range(0,2);
-			Debug.Log(player.transform.position.x);
-			Debug.Log (initialPosition);
-			Debug.Log (dir);
 			if (dir == 1 && (player.transform.position.x >= (initialPosition - hoverLimits))) { //left
 				moveAmount -= floatSpeed;
 				player.transform.position -= movementAmountX*Time.deltaTime*20;

@@ -38,9 +38,7 @@ public class Player_Movement : MonoBehaviour {
 		while (shouldHover) {
 			yield return new WaitForSeconds(0.05f);
 			int dir = Random.Range(0,2);
-			Debug.Log(player.transform.position.y);
-			Debug.Log (initialPosition);
-			Debug.Log (dir);
+
 			if (dir == 1 && (player.transform.position.y >= (initialPosition - hoverLimits))) { //Up
 				moveAmount -= floatSpeed;
 				player.transform.position -= movementAmountY*Time.deltaTime*30;
