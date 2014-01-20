@@ -14,8 +14,18 @@ public class Item_Script : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Player") {
+		if (item.tag == "Clock" && other.tag == "Player") {
+			GameObject camera = GameObject.Find("Main Camera");
+			ClockSlow slow = (ClockSlow) camera.GetComponent(typeof(ClockSlow));
+			Debug.Log ("HitClock");
+			slow.shouldSlow = true;
+			Destroy(item);
+
+		}
+		else if (other.tag == "Player") {
 			Destroy (item);
 		}
 	}
+
+
 }

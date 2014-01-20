@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Random_Spawning : MonoBehaviour {
-	public GameObject portal, item, asteroid, spacecop;
+	public GameObject portal, item,clock, asteroid, spacecop;
 	public bool shouldSpawn;
 	private float spawnPosition;
 
@@ -13,6 +13,7 @@ public class Random_Spawning : MonoBehaviour {
 		StartCoroutine(AsteroidSpawn(Random.Range(0.01f, 1.2f)));
 		StartCoroutine(PortalSpawn(Random.Range(3.0f, 6.0f)));
 		StartCoroutine(SpacecopSpawn(Random.Range(5.0f, 8.0f)));
+		StartCoroutine (ClockSpawn (Random.Range (7.0f, 10.0f)));
 	}
 	
 	// Update is called once per frame
@@ -45,6 +46,14 @@ public class Random_Spawning : MonoBehaviour {
 				Instantiate(item,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
 			}
 			waitTime = Random.Range(0.04f, 2.0f);
+		}
+	}
+
+	public IEnumerator ClockSpawn (float waitTime) {
+		while (shouldSpawn) {
+			yield return new WaitForSeconds(waitTime);
+			Instantiate(clock,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
+			waitTime = Random.Range(7.0f, 10.0f);
 		}
 	}
 
