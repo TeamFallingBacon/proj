@@ -1,14 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\CollisionSounds.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\Pause_menu.cs">
     <Files>
-      <File FileName="Assets\Standard Assets\Scripts\CollisionSounds.cs" Line="11" Column="17" />
+      <File FileName="Assets\Standard Assets\Scripts\Score_Keeper.cs" Line="14" Column="44" />
+      <File FileName="Assets\Standard Assets\Scripts\CollisionSounds.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Scripts\Main_Menu_GUI.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Scripts\Falling_Script.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\Player_Movement.cs" Line="35" Column="3" />
-      <File FileName="Assets\Standard Assets\Scripts\Item_Script.cs" Line="13" Column="3" />
-      <File FileName="Assets\Standard Assets\Scripts\Player_Moment_Horizontal.cs" Line="42" Column="43" />
-      <File FileName="Assets\Standard Assets\Scripts\Player_Score.cs" Line="10" Column="61" />
+      <File FileName="Assets\Standard Assets\Scripts\Player_Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\Item_Script.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\Player_Moment_Horizontal.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\Player_Score.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\Score_GUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\Soundtrack.cs" Line="4" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\InitializeGame.cs" Line="8" Column="5" />
+      <File FileName="Assets\Standard Assets\Scripts\Pause_menu.cs" Line="39" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
