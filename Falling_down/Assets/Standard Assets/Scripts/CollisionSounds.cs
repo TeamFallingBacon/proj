@@ -6,6 +6,7 @@ public class CollisionSounds : MonoBehaviour {
 	public AudioClip baconSound;
 	public AudioClip asteroidSound;
 	public AudioClip portalSound;
+	public AudioClip spacecopSound;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,8 @@ public class CollisionSounds : MonoBehaviour {
 			audio.PlayOneShot(baconSound, 1f);
 		} else if (other.tag == "Portal") {
 			audio.PlayOneShot(portalSound);
+		} else if (other.tag == "Spacecop") {
+			audio.PlayOneShot(spacecopSound);
 		}
 	}
 }

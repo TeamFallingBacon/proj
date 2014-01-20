@@ -29,6 +29,9 @@ public class Player_Score : MonoBehaviour {
 		else if (other.tag == "Asteroid") {
 			fuel.fuelRemaining -= 10.0f;
 			score.totalScore -= 200;
+		} else if (other.tag == "Spacecop") {
+			fuel.fuelRemaining -= 30.0f;
+			score.totalScore -= 5000;
 		}
 	}
 }
