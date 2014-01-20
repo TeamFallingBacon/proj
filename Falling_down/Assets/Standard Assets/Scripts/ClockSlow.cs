@@ -13,19 +13,17 @@ public class ClockSlow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (shouldSlow) {
-			StartCoroutine (slowTime (0.0f));		
+			StartCoroutine (slowTime (3f));		
 		}
 	
 	}
 
 	public IEnumerator slowTime (float wait){
 		while (shouldSlow) {
-			Time.timeScale = 0.5f;
-			Debug.Log (Time.timeScale);
-			yield return new WaitForSeconds(1.5f);
-			Time.timeScale = 1.0f;
-			Debug.Log (Time.timeScale);
-			shouldSlow=false;
+			Initialize.slowTime = .3f;
+			yield return new WaitForSeconds(wait);
+			Initialize.slowTime = 1f;
+			shouldSlow = false;
 		}
 
 	}

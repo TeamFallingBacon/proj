@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Programs for Windows 8/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Programs for Windows 8/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -58,10 +58,10 @@
      <Compile Include="Assets\Standard Assets\Scripts\Falling_Script_Horizontal.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\FuelGauge.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Initialize.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Item_Script.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Item_Spawning.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Main_Menu_GUI.cs" />
-     <Compile Include="Assets\Standard Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Pause_menu.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Player_Moment_Horizontal.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Player_Movement.cs" />

@@ -18,7 +18,7 @@ public class Random_Spawning : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		Debug.Log ("Fixed: " + Time.fixedDeltaTime);
 	}
 
 	public IEnumerator SpacecopSpawn (float waitTime) {

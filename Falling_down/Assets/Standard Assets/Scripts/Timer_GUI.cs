@@ -18,7 +18,7 @@ public class Timer_GUI : MonoBehaviour {
 	}
 	void OnGUI(){
 		GUI.skin = guiSkin;
-		time_of = Time.realtimeSinceStartup - start_time.start_time;
+		time_of = Time.time - start_time.start_time;
 		int minutes = ((int)time_of / 60);
 		int seconds = ((int)time_of % 60);
 		

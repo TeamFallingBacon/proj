@@ -19,6 +19,6 @@ public class Falling_Script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		fallingObject.transform.position += movementAmount * Time.deltaTime*100;
+		fallingObject.transform.position += movementAmount * Time.deltaTime*100 * Initialize.slowTime;
 	}
 }

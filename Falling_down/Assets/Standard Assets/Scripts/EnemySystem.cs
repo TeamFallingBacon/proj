@@ -23,7 +23,7 @@ public class EnemySystem : MonoBehaviour {
 	public IEnumerator MoveToScreen() {
 		while(true) {
 			yield return new WaitForSeconds(0);
-			enemy.transform.position += movementAmount * Time.deltaTime*40;
+			enemy.transform.position += movementAmount * Time.deltaTime*40 * Initialize.slowTime;
 			if ((enemy.transform.position.y - initialPosition.y) >= 2.3) {
 				break;
 			}
@@ -40,7 +40,7 @@ public class EnemySystem : MonoBehaviour {
 			timer -= Time.deltaTime;
 			Debug.Log ("TIMER: " + timer);
 			yield return new WaitForSeconds(0);
-			enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, new Vector3(player.transform.position.x, enemy.transform.position.y, enemy.transform.position.z), 3.7f*Time.deltaTime);
+			enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, new Vector3(player.transform.position.x, enemy.transform.position.y, enemy.transform.position.z), 3.7f * Time.deltaTime * Initialize.slowTime);
 		}
 		//Phase three, shoot toward player
 		StartCoroutine(ShootTowards());
@@ -49,7 +49,7 @@ public class EnemySystem : MonoBehaviour {
 	public IEnumerator ShootTowards() {
 		while(true) {
 			yield return new WaitForSeconds(0);
-			enemy.transform.position += movementAmount * Time.deltaTime*125;
+			enemy.transform.position += movementAmount * Time.deltaTime*125 * Initialize.slowTime;
 		}
 	}
 
