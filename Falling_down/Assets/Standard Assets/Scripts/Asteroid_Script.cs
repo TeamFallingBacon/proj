@@ -1,24 +1,23 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class Portal_Script : MonoBehaviour {
-	private GameObject portal;
+public class Asteroid_Script : MonoBehaviour {
+	private GameObject asteroid;
 	private FuelGauge fuel;
 	// Use this for initialization
 	void Start () {
-		portal = gameObject;
+		asteroid = gameObject;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
-
+	
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Player") {
-			Debug.Log("Enter portal");
-			Application.LoadLevel("level2");
-			Destroy (portal);
+			Debug.Log("Hit Asteroid");
+			Destroy (asteroid);
 		}
 	}
 }
