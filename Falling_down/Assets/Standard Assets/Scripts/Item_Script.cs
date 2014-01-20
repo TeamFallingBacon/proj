@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Item_Script : MonoBehaviour {
 	private GameObject item;
-	private bool shouldSlow = false;
 	// Use this for initialization
 	void Start () {
 		item = gameObject;
@@ -16,27 +15,17 @@ public class Item_Script : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other) {
 		if (item.tag == "Clock" && other.tag == "Player") {
+			GameObject camera = GameObject.Find("Main Camera");
+			ClockSlow slow = (ClockSlow) camera.GetComponent(typeof(ClockSlow));
 			Debug.Log ("HitClock");
+			slow.shouldSlow = true;
 			Destroy(item);
-			shouldSlow = true;
 
 		}
 		else if (other.tag == "Player") {
 			Destroy (item);
 		}
 	}
-	public IEnumerator slowTime (){
-		Time.timeScale = 0.5f;
-		Debug.Log (Time.timeScale);
-		
-		Time.timeScale = 1.0f;
-		Debug.Log (Time.timeScale);
-	}
-	void slowTime(){
-		Time.timeScale = 0.5f;
-		Debug.Log (Time.timeScale);
 
-		Time.timeScale = 1.0f;
-		Debug.Log (Time.timeScale);
-	}
+
 }

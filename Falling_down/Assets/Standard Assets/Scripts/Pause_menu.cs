@@ -5,18 +5,24 @@ public class Pause_menu : MonoBehaviour {
 	public GUISkin guiSkin;
 	public GameObject camera;
 	private FuelGauge fuel;
+	private float scale= 1.0f;
 
 	void pause(){
 		Time.timeScale = 0.0f;
 	}
 	void unpause(){
-		Time.timeScale = 1.0f;
+		Time.timeScale = scale;
 	}
 	void pauseToggle(){
+		Debug.Log (string.Format ("Time: {0}", Time.timeScale));
 		if (Time.timeScale > 0) {
 			pause ();		
-		} else {
-			unpause ();		
+		}else if(Time.timeScale > 0 && Time.timeScale < 1){
+			scale = Time.timeScale;
+			pause ();
+		}else {
+			unpause ();
+			scale = 1.0f;
 		}
 	}
 		
@@ -28,7 +34,7 @@ public class Pause_menu : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 		if (Input.GetKeyDown ("space")) {
 			pauseToggle();		
 		}
@@ -53,7 +59,7 @@ public class Pause_menu : MonoBehaviour {
 			}
 		}
 		
-		else if (Time.timeScale < 1) {
+		else if (Time.timeScale == 0.0f) {
 			GUI.Label (new Rect (Screen.width/2 - 65.0f, Screen.height/2-25.0f, 170, 50), "PAUSED");
 			if (GUI.Button(new Rect (Screen.width/2 - 62.0f, Screen.height/2+25.0f, 150, 50), "MAIN MENU")) {
 				GameObject scoreKeeper = GameObject.Find ("ScoreKeeper");
