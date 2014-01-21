@@ -24,7 +24,7 @@ public class Random_Spawning_Horizontal : MonoBehaviour {
 	public IEnumerator ClockSpawn (float waitTime) {
 		while (shouldSpawn) {
 			yield return new WaitForSeconds(waitTime);
-			Instantiate(clock,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
+			Instantiate(clock,new Vector2(spawnPosition,Random.Range(-4.66f,4.66f)), Quaternion.Euler(0,0,90));
 			waitTime = Random.Range(7.0f, 10.0f);
 		}
 	}
@@ -32,25 +32,23 @@ public class Random_Spawning_Horizontal : MonoBehaviour {
 	public IEnumerator SpacecopSpawn (float waitTime) {
 		while (shouldSpawn) {
 			yield return new WaitForSeconds(waitTime);
-			Instantiate(spacecop,new Vector2(Random.Range (2.996f,12.3f), spawnPosition), Quaternion.identity);
+			Instantiate(spacecop,new Vector2(spawnPosition,Random.Range(-4.66f,4.66f)), Quaternion.Euler(0,0,90));
 			yield return new WaitForSeconds(waitTime/4);
 		}
 	}
 
 	public IEnumerator AsteroidSpawn (float waitTime) {
 		while(shouldSpawn) {
-			for (int i = 0; i != Random.Range(1, 12); i++) {
-				yield return new WaitForSeconds(Random.Range(0.01f, 1.2f));
-				Instantiate(asteroid,new Vector2(spawnPosition,Random.Range(-4.66f,4.66f)), Quaternion.Euler(0,0,90));
-			}
-			waitTime = Random.Range(0.01f, 2.0f);
+			yield return new WaitForSeconds(Random.Range(0.01f, 1.2f));
+			Instantiate(asteroid,new Vector2(spawnPosition,Random.Range(-4.66f,4.66f)), Quaternion.Euler(0,0,90));
+			waitTime = Random.Range(0.04f, 1.0f);
 		}
 	}
 	
 	public IEnumerator ItemSpawn (float waitTime) {
 		while(shouldSpawn) {
 			yield return new WaitForSeconds(waitTime);
-			Instantiate(item,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
+			Instantiate(item,new Vector2(spawnPosition,Random.Range(-4.66f,4.66f)), Quaternion.Euler(0,0,90));
 			waitTime = Random.Range(0.04f, 0.8f);
 		}
 	}

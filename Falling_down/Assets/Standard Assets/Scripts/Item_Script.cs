@@ -8,13 +8,13 @@ public class Item_Script : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		item = gameObject;
-		StartCoroutine(Wiggle());
+		//StartCoroutine(Wiggle());
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	}
-
+	/*
 	public IEnumerator Wiggle() {
 		float rotationAmount = 0;
 		while (true) {
@@ -42,7 +42,7 @@ public class Item_Script : MonoBehaviour {
 //			}
 //		}
 	}
-	
+	*/
 	void OnTriggerEnter2D(Collider2D other) {
 		if (item.tag == "Clock" && other.tag == "Player") {
 			GameObject camera = GameObject.Find("Main Camera");
