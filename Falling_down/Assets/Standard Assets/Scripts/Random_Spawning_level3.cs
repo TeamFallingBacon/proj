@@ -24,7 +24,7 @@ public class Random_Spawning_level3 : MonoBehaviour {
 	public IEnumerator SpacecopSpawn (float waitTime) {
 		while (shouldSpawn) {
 			yield return new WaitForSeconds(waitTime);
-			Instantiate(spacecop,new Vector2(Random.Range (2.996f,12.3f), spawnPosition), Quaternion.identity);
+			Instantiate(spacecop,new Vector2(Random.Range (2.996f,12.3f), spawnPosition), Quaternion.Euler(0,0,180));
 			yield return new WaitForSeconds(waitTime/4);
 		}
 	}
@@ -43,7 +43,7 @@ public class Random_Spawning_level3 : MonoBehaviour {
 				yield return new WaitForSeconds(Random.Range(0.01f, 1.2f));
 				Instantiate(asteroid,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
 			}
-			waitTime = Random.Range(0.01f, 2.0f);
+			waitTime = Random.Range(0.04f, 1.0f);
 		}
 	}
 	

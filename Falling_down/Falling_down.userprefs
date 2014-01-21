@@ -1,15 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\ScreenResolution.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\Portal_Script.cs">
     <Files>
-      <File FileName="Assets\Standard Assets\Scripts\ScreenResolution.cs" Line="16" Column="41" />
-      <File FileName="Assets\Standard Assets\Scripts\EnemySystemlevel2.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\Random_Spawning_level3.cs" Line="46" Column="36" />
+      <File FileName="Assets\Standard Assets\Scripts\Random_Spawning.cs" Line="65" Column="40" />
       <File FileName="Assets\Standard Assets\Scripts\Random_Spawning_Horizontal.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\Item_Script.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\EnemySystem.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\Random_Spawning.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\Background_Movement_Horizontal.cs" Line="25" Column="31" />
-      <File FileName="Assets\Standard Assets\Scripts\Background_Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\Portal_Script.cs" Line="33" Column="21" />
+      <File FileName="Assets\Standard Assets\Scripts\Player_Score.cs" Line="25" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

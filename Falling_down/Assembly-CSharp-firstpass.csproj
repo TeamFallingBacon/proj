@@ -55,6 +55,7 @@
      <Compile Include="Assets\Standard Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\EnemySystem.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\EnemySystemlevel2.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\EnemySystemlevel3.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Falling_Script.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Falling_Script_Horizontal.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\FuelGauge.cs" />

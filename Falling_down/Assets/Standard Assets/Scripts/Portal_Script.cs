@@ -28,7 +28,7 @@ public class Portal_Script : MonoBehaviour {
 			do {
 				newLevelNum = Random.Range(1,finalLevelNumber+1);
 			} while(newLevelNum == levelNum);
-
+			Initialize.slowTime = 1;
 			Application.LoadLevel("level" + newLevelNum);
 			Destroy (portal);
 		}
