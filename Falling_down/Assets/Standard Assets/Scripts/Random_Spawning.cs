@@ -11,7 +11,7 @@ public class Random_Spawning : MonoBehaviour {
 		spawnPosition = -8f;
 		StartCoroutine(ItemSpawn(Random.Range(0.01f, 1.2f)));
 		StartCoroutine(AsteroidSpawn(Random.Range(0.01f, 1.2f)));
-		StartCoroutine(PortalSpawn(Random.Range(3.0f, 6.0f)));
+		StartCoroutine(PortalSpawn(Random.Range(8.0f, 15.0f)));
 		StartCoroutine(SpacecopSpawn(Random.Range(3.0f, 5.0f)));
 		StartCoroutine (ClockSpawn (Random.Range (8.0f, 15.0f)));
 	}
@@ -46,11 +46,6 @@ public class Random_Spawning : MonoBehaviour {
 		while(shouldSpawn) {
 			yield return new WaitForSeconds(waitTime);
 			Instantiate(item,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
-			/*
-			for (int i = 0; i != Random.Range(6, 9); i++) {
-				yield return new WaitForSeconds(waitTime);
-				Instantiate(item,new Vector2(Random.Range(2.996f,12.3f),spawnPosition), Quaternion.identity);
-			}*/
 			waitTime = Random.Range(0.04f, 0.8f);
 		}
 	}

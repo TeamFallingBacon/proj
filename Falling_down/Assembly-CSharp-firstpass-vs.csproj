@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Programs for Windows 8/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Programs for Windows 8/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -68,7 +68,6 @@
      <Compile Include="Assets\Standard Assets\Scripts\Player_Movement_level3.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Player_Score.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Portal_Script.cs" />
-     <Compile Include="Assets\Standard Assets\Scripts\Portal_Script_level2.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\PreventDupe.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Random_Spawning.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Random_Spawning_Horizontal.cs" />
